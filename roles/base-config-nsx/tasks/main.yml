@@ -148,6 +148,9 @@
     cluster_moid: "{{ vcenter_compute_cluster_moid.object_id }}"
     dvs_moid: "{{ vcenter_dvs_moid.object_id }}"
     ippool_id: "{{ vtep_ip_pool.ippool_id }}"
+    vlan_id: "{{ nsxIppools.vteps.vlan_id }}"
+    teaming: "{{ nsxIppools.vteps.teaming }}"
+    mtu: "{{ nsxIppools.vteps.mtu }}"
   register: vxlan_prep
   tags: nsx_vxlan_prep
 
@@ -159,6 +162,9 @@
     cluster_moid: "{{ vcenter_mgmt_cluster_moid.object_id }}"
     dvs_moid: "{{ vcenter_dvs_moid.object_id }}"
     ippool_id: "{{ vtep_ip_pool.ippool_id }}"
+    vlan_id: "{{ nsxIppools.vteps.vlan_id }}"
+    teaming: "{{ nsxIppools.vteps.teaming }}"
+    mtu: "{{ nsxIppools.vteps.mtu }}"
   register: vxlan_prep
   tags: nsx_vxlan_prep
 
